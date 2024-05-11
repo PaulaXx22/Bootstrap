@@ -9,37 +9,37 @@
   <style>
     
     body {
-      padding-top: 80px; /* Altura de la barra de navegación */
+      padding-top: 80px; 
     }
     .navbar {
-      min-height: 80px; /* Altura mínima de la barra de navegación */
+      min-height: 80px; 
     }
     .navbar-brand {
-      font-size: 1.5rem; /* Tamaño de la fuente del logo */
+      font-size: 1.5rem; 
     }
     .container {
       margin-top: 20px;
     }
-    /* Estilos para la sección "Nuevo Usuario" */
+    /* Nuevo Usuario" */
     
     #viewCreateUser {
-      background-image: url('/geeks-2894621_1280.jpg'); /* URL de tu imagen de fondo */
+      background-image: url('/geeks-2894621_1280.jpg'); 
       background-size: cover;
       background-position: center;
-      color: white; /* Color del texto */
-      padding: 100px 0; /* Espaciado interno */
+      color: white; 
+      padding: 100px 0; 
       text-align: center;
-      min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+      min-height: 100vh; 
     }
     #viewCreateUser form {
-      background-color: #9ac9e4b3; /* Fondo semitransparente para el formulario */
+      background-color: #9ac9e4b3; /* Fondo formulario */
       padding: 20px;
       border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
     <a class="navbar-brand" href="#">Registro de Usuarios</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,7 @@
   <div class="container" id="viewUsers" style="display:none;">
     <h2 class="mt-5 mb-3">Usuarios Registrados</h2>
     <div class="row" id="userList">
-      <!-- Aquí se mostrarán los usuarios -->
+    
     </div>
   </div>
 
@@ -95,43 +95,43 @@
 
   <script>
     $(document).ready(function() {
-      // Mostrar vista "Crear Usuario" por defecto
+      
       $('#viewCreateUser').show();
       $('#viewUsers').hide();
 
-      // Capturar evento de envío del formulario
+      
       $('#userForm').submit(function(event) {
         event.preventDefault(); // Evitar envío automático del formulario
 
-        // Obtener valores de los campos
+        
         var name = $('#name').val();
         var email = $('#email').val();
         var password = $('#password').val();
         var confirmPassword = $('#confirmPassword').val();
 
-        // Validar que las contraseñas coincidan
+        // contraseñas
         if (password !== confirmPassword) {
           alertMessage('Las contraseñas no coinciden.', 'alert-danger');
           return;
         }
 
-        // Guardar usuario en localStorage
+        // localStorage
         var user = {
           name: name,
           email: email
         };
         localStorage.setItem('user', JSON.stringify(user));
 
-        // Mostrar mensaje de éxito
+        //  alerta
         alertMessage('Usuario creado correctamente.', 'alert-success');
 
-        // Redirigir a la vista de Usuarios
+        
         $('#viewCreateUser').hide();
         $('#viewUsers').show();
         showUsers();
       });
 
-      // Mostrar usuarios guardados
+      //  usuarios guardados
       function showUsers() {
         var user = JSON.parse(localStorage.getItem('user'));
         if (user) {
@@ -150,7 +150,7 @@
         }
       }
 
-      // Función para mostrar mensajes de alerta
+      
       function alertMessage(message, alertType) {
         var alertDiv = $('<div>').addClass('alert ' + alertType).text(message);
         $('body').append(alertDiv);
@@ -159,7 +159,7 @@
         }, 3000);
       }
 
-      // Cambiar entre vistas
+      
       $('#navCreateUser').click(function(event) {
         event.preventDefault();
         $('#viewCreateUser').show();
@@ -176,5 +176,3 @@
   </script>
 </body>
 </html>
-
-
