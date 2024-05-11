@@ -1,19 +1,19 @@
 $(document).ready(function() {
-  // Mostrar vista "Crear Usuario" por defecto
+  // crear usuario
   $('#viewCreateUser').show();
   $('#viewUsers').hide();
 
-  // Capturar evento de envío del formulario
+  
   $('#userForm').submit(function(event) {
-    event.preventDefault(); // Evitar envío automático del formulario
+    event.preventDefault(); 
 
-    // Obtener valores de los campos
+    
     var name = $('#name').val();
     var email = $('#email').val();
     var password = $('#password').val();
     var confirmPassword = $('#confirmPassword').val();
 
-    // Validar que las contraseñas coincidan
+    //  contraseña
     if (password !== confirmPassword) {
       alertMessage('Las contraseñas no coinciden.', 'alert-danger');
       return;
@@ -26,16 +26,16 @@ $(document).ready(function() {
     };
     localStorage.setItem('user', JSON.stringify(user));
 
-    // Mostrar mensaje de éxito
+   
     alertMessage('Usuario creado correctamente.', 'alert-success');
 
-    // Redirigir a la vista de Usuarios
+   
     $('#viewCreateUser').hide();
     $('#viewUsers').show();
     showUsers();
   });
 
-  // Mostrar usuarios guardados
+  //  usuarios guardados
   function showUsers() {
     var user = JSON.parse(localStorage.getItem('user'));
     if (user) {
@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
   }
 
-  // Función para mostrar mensajes de alerta
+  // alerta
   function alertMessage(message, alertType) {
     var alertDiv = $('<div>').addClass('alert ' + alertType).text(message);
     $('body').append(alertDiv);
@@ -63,7 +63,7 @@ $(document).ready(function() {
     }, 3000);
   }
 
-  // Cambiar entre vistas
+ 
   $('#navCreateUser').click(function(event) {
     event.preventDefault();
     $('#viewCreateUser').show();
