@@ -1,7 +1,8 @@
 <h1 align="center"> Bootstrap & Validaciones </h1>
 # Proyecto de Registro de Usuarios con Bootstrap
 
-![Logo de Bootstrap](https://github.com/PaulaXx22/Bootstrap/raw/main/png-clipart-bootstrap-logo-thumbnail-tech-companies%20(1).png)
+![Logo de Bootstrap](https://github.com/PaulaXx22/Bootstrap/raw/main/bootstraplogo.png)
+
 
 
 Este proyecto es un ejercicio práctico para implementar un formulario de registro de usuarios utilizando Bootstrap y JavaScript.
