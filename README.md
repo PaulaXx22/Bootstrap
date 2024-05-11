@@ -1,5 +1,5 @@
 <h1 align="center"> Bootstrap & Validaciones </h1>
-# Proyecto de Registro de Usuarios con Bootstrap
+
 
 ![Logo de Bootstrap](https://github.com/PaulaXx22/Bootstrap/raw/main/bootstraplogo.png)
 
