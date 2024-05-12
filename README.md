@@ -26,7 +26,8 @@ El objetivo de este proyecto es crear una interfaz de usuario interactiva y resp
 
 ## Capturas de Pantalla
 
-_(Agrega aquí capturas de pantalla de tu interfaz si lo deseas)_
+![Logo de Bootstrap](https://github.com/PaulaXx22/Bootstrap/blob/main/Screenshot%202024-05-11%20135246.png)
+![Logo de Bootstrap]([https://github.com/PaulaXx22/Bootstrap/blob/main/Screenshot%202024-05-11%20135246.png](https://github.com/PaulaXx22/Bootstrap/blob/main/usuarios.png)
 
 ## Capturas de Pantalla
 Si quieres saber mas sobre Bootastraps dale clic al siguiente link: https://docs.google.com/presentation/d/1ZMltgTstdRQKFr9lwF7xDpOXbFCoHU_dmqVYQJzPBGc/edit?usp=sharing
